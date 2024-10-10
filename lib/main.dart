@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unit_test_practice/view/userDataView.dart';
 import 'package:unit_test_practice/view_model/counter/counter.dart';
 
 void main() {
@@ -61,6 +62,15 @@ class _MyHomePageState extends State<MyHomePage> {
               '${counter.count}',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+
+            const SizedBox(height: 30,),
+            
+            TextButton(
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const Userdataview()));
+                },
+                child: const Text("User Data"))
+
           ],
         ),
       ),
